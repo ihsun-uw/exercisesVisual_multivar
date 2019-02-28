@@ -10,9 +10,9 @@
 2. [Exercise 2: Inferential Plot](#ex2)
 
 ##
-Bring in the data and load the necessary packages. Information on safety in 60 cities: digital, health, infrastructure, and personal
 
-```{r, echo=TRUE, include=FALSE}
+```{r echo=T, include=F}
+
 library(openxlsx)
 link2="https://github.com/EvansDataScience/data/raw/master/safeCitiesIndex.xlsx"
 
