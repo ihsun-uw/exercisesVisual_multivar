@@ -205,34 +205,7 @@ $(document).ready(function () {
 </div>
 <div id="section" class="section level2">
 <h2></h2>
-<p>bring in the data and load the necessary packages. Information on safety in 60 cities: digital, health, infrastructure, and personal</p>
-<pre class="r"><code>library(openxlsx)
-link2=&quot;https://github.com/EvansDataScience/data/raw/master/safeCitiesIndex.xlsx&quot;
-
-safe2=read.xlsx(link2)
-
-library(ggplot2)
-library(GGally)
-library(reshape)
-library(ggiraph)
-library(ggiraphExtra)
-library(dotwhisker)
-library(broom)
-library(dplyr)</code></pre>
-<pre><code>## 
-## Attaching package: 'dplyr'</code></pre>
-<pre><code>## The following object is masked from 'package:reshape':
-## 
-##     rename</code></pre>
-<pre><code>## The following object is masked from 'package:GGally':
-## 
-##     nasa</code></pre>
-<pre><code>## The following objects are masked from 'package:stats':
-## 
-##     filter, lag</code></pre>
-<pre><code>## The following objects are masked from 'package:base':
-## 
-##     intersect, setdiff, setequal, union</code></pre>
+<p>Bring in the data and load the necessary packages. Information on safety in 60 cities: digital, health, infrastructure, and personal</p>
 <div id="descriptive-plot" class="section level3">
 <h3>Descriptive Plot</h3>
 <p>Create data to plot and order from smallest to largest ranking across 4 dimenssions of safety</p>
@@ -280,6 +253,7 @@ allModels=rbind(model1_t, model2_t)</code></pre>
 <p>misc plot elements</p>
 <pre class="r"><code>reg_title = &quot;Infrastructure and Digital Safety are Statistically Significantly Associated
 with an Increase in Personal Safety&quot;</code></pre>
+<p><a id="ex2"></a></p>
 <pre class="r"><code>dwplot(allModels) + 
     geom_vline(xintercept = 0, 
                colour = &quot;grey60&quot;, 
